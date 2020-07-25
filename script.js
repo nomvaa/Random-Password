@@ -1,13 +1,11 @@
 // Write password to the #password input
 function writePassword(password) {
-  console.log("writing password...", password)
   var passwordTextBox = document.querySelector("#password");
   passwordTextBox.value = password;
 }
 
 // MAIN <---starting point
 function generate() {
-  console.log("clicked")
   var passwordLength = prompt('How long do you want the password to be?');
   passwordLength = verifyLength(passwordLength);
   var charSet = generateCharSet(); //character set
@@ -37,19 +35,19 @@ function generateCharSet() {
   var charSet = "";
   if(lowerType){
     charSet = charSet.concat("abcdefghijklmnopqrstuvwxyz");
-    console.log(charSet);
+
   } 
   if(upperType) {
     charSet = charSet.concat("ABCDEFGHIJKLMNOPQRSTUVWXZY");
-    console.log(charSet);
+
   }
   if(numType) {
     charSet = charSet.concat("1234567890");
-    console.log(charSet);
+
   }
   if(specialType) {
     charSet = charSet.concat("!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~");
-    console.log(charSet);
+
   }
   return charSet;
 }
@@ -59,11 +57,10 @@ function generateCharSet() {
 function generatePassword(characters, passLength) {
   var password = "";
   var charLength = characters.length;
-  console.log("chars: ", characters)
-  console.log("plength", passLength, charLength);
+
   for ( var i = 0; i < passLength; i++ ) {
     password += characters.charAt(Math.floor(Math.random() * charLength));
-    console.log("password: ", password)
+ 
   }
   return password;
 }
