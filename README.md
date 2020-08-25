@@ -23,3 +23,6 @@ WHEN all prompts are answered<BR>
 THEN a password is generated that matches the selected criteria<BR>
 WHEN the password is generated<BR>
 THEN the password is either displayed in an alert or written to the page
+
+<h1>Link to Application</h1>
+https://nomvaa.github.io/Random-Password/
